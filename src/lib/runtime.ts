@@ -4,8 +4,8 @@
 
 import fs from 'fs';
 import path from 'path';
-import { detectByFiles } from '@webship/workspace-container';
-import type { ContainerProject, ContainerRuntime } from '@webship/workspace-container';
+import { detectByFiles } from '@webship.co/workspace-container';
+import type { ContainerProject, ContainerRuntime } from '@webship.co/workspace-container';
 
 export function readLando(file: string, fallbackName: string): { name: string; proxy?: string } {
   let text = '';

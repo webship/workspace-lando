@@ -5,4 +5,4 @@ Feature: The Lando plugin on a project row
   Scenario: The plugin is listed on the Plugins page
     Given I am on "/settings/plugins"
      Then I should see "Lando"
-      And I should see "@webship/workspace-lando"
+      And I should see "@webship.co/workspace-lando"
