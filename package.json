@@ -26,6 +26,14 @@
   "workspacePlugin": {
     "name": "lando",
     "label": "Lando",
+    "needs": {
+      "commands": [
+        {
+          "command": "lando",
+          "hint": "https://docs.lando.dev/install/"
+        }
+      ]
+    },
     "typeActions": {
       "lando": [
         "sites",
