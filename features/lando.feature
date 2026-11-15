@@ -6,3 +6,19 @@ Feature: The Lando plugin on a project row
     Given I am on "/settings/plugins"
      Then I should see "Lando"
       And I should see "@webship.co/workspace-lando"
+
+  Scenario: The AI Agents folder lists the agent the plugin ships
+    Given I am on "/ai-agents"
+     Then I should see "lando-operator"
+
+  Scenario: The AI Skills folder lists the skill the plugin ships
+    Given I am on "/ai-skills"
+     Then I should see "lando-menu"
+
+  Scenario: The AI Commands folder lists the command the plugin ships
+    Given I am on "/ai-commands"
+     Then I should see "lando-status"
+
+  Scenario: The AI Prompts folder lists the prompt the plugin ships
+    Given I am on "/ai-prompts"
+     Then I should see "lando-up-and-check"

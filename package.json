@@ -1,7 +1,7 @@
 {
   "name": "@webship.co/workspace-lando",
   "version": "1.0.8",
-  "description": "Lando for Webship Workspace: the LANDO menu on every project with a .lando.yml (start, stop, restart, rebuild, info, logs, ssh, destroy), the up/down caption, the proxy URL as the site link. A runtime of @webship.co/workspace-container.",
+  "description": "Lando for Webship Workspace: the LANDO menu on every project with a .lando.yml (start, stop, restart, rebuild, info, logs, ssh, destroy), the up/down caption, the proxy URL as the site link. It carries its AI items, each placed in the workspace folder of its kind: an agent, a skill, a command and a prompt. A runtime of @webship.co/workspace-container.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "license": "ISC",
@@ -11,11 +11,13 @@
   },
   "files": [
     "dist/src",
+    "ai",
     "features",
     "scripts",
     "README.md",
     "ddev",
-    "host-mounts.txt"
+    "host-mounts.txt",
+    "docs"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -27,6 +29,12 @@
     "name": "lando",
     "label": "Lando",
     "needs": {
+      "plugins": [
+        "ai-agents",
+        "ai-skills",
+        "ai-commands",
+        "ai-prompts"
+      ],
       "commands": [
         {
           "command": "lando",
@@ -42,6 +50,20 @@
     },
     "scripts": {
       "hostInstall": "scripts/host-install.sh"
+    },
+    "ai": {
+      "agents": [
+        "ai/agents/lando-operator.md"
+      ],
+      "skills": [
+        "ai/skills/lando-menu"
+      ],
+      "commands": [
+        "ai/commands/lando-status.md"
+      ],
+      "prompts": [
+        "ai/prompts/lando-up-and-check.md"
+      ]
     },
     "features": [
       "features/lando.feature"

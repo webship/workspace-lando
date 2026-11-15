@@ -1,0 +1,21 @@
+{
+  "variants": [
+    {
+      "title": "",
+      "sample": {
+        "file": ".lando.yml",
+        "name": "<name>"
+      }
+    }
+  ],
+  "readonly": [
+    "status"
+  ],
+  "handover": [
+    "logs",
+    "shell"
+  ],
+  "export": "landoRuntime",
+  "find": "ls .lando.yml .lando.yaml 2>/dev/null",
+  "helper": []
+}

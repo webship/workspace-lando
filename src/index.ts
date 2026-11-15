@@ -14,6 +14,12 @@ import { landoRuntime } from './lib/runtime';
 
 export { landoRuntime };
 
+/** The AI items the installer places: agents in ai-agents/, skills in ai-skills/, commands in ai-commands/, prompts in ai-prompts/. */
+export const AGENTS: string[] = ['lando-operator'];
+export const SKILLS: string[] = ['lando-menu'];
+export const AI_COMMANDS: string[] = ['lando-status'];
+export const PROMPTS: string[] = ['lando-up-and-check'];
+
 export function register(api: PluginApi): void {
   registerContainer(api, landoRuntime);
 }
